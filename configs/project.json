@@ -9,7 +9,8 @@
     "agent",
     "workflow"
   ],
-  "accent": "#588157",
+  "accent": "#502cc8",
+  "secondary_accent": "#8c2ca9",
   "dashboard_metrics": [
     {
       "label": "Resolution Rate",
@@ -42,5 +43,52 @@
     "The primary value proposition is: Turn messy meeting notes into concise summaries, action items, and decision logs.",
     "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
     "Typical stakeholders include analytics, operations, product, and leadership teams working on meetings, agent, workflow."
+  ],
+  "app_archetype": "copilot",
+  "ui_profile": {
+    "layout": "folio",
+    "surface": "sand",
+    "font_stack": "\"IBM Plex Sans\", \"Segoe UI\", sans-serif",
+    "radius": 24,
+    "shadow": 60,
+    "eyebrow_style": "outline",
+    "module_columns": 3,
+    "hero_align": "left",
+    "headline_mode": "tall"
+  },
+  "app_modules": [
+    {
+      "label": "Workflow 01",
+      "title": "Routing Simulator",
+      "description": "Preview how a request gets prioritized or routed through the workflow.",
+      "endpoint": "/score",
+      "input_mode": "json",
+      "cta": "Simulate Route",
+      "prefill": "{\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"leadership\"\n  }\n}",
+      "hint": "Routing score and top signals will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Workflow 02",
+      "title": "Operator Brief",
+      "description": "Generate a concise recommended action set for the current workflow state.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Generate Brief",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Meeting Notes Action Agent.\",\n  \"features\": {\n    \"query\": \"Summarize the highest priority risk and recommended next step.\",\n    \"audience\": \"leadership\"\n  },\n  \"metrics\": {\n    \"acquisition\": 31.1,\n    \"activation\": 33.5,\n    \"retention\": 47.2,\n    \"revenue\": 72.7\n  }\n}",
+      "hint": "Operator brief and recommended actions will appear here.",
+      "span": "wide"
+    },
+    {
+      "label": "Workflow 03",
+      "title": "Grounded Prompt",
+      "description": "Ask a targeted question and inspect the support context behind the answer.",
+      "endpoint": "/query",
+      "input_mode": "text",
+      "cta": "Run Prompt",
+      "prefill": "What is the top priority recommendation for Meeting Notes Action Agent?",
+      "hint": "Grounded answer and context excerpts will appear here.",
+      "span": "normal"
+    }
   ]
 }
