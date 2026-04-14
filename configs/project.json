@@ -1,0 +1,46 @@
+{
+  "slug": "meeting-notes-action-agent",
+  "title": "Meeting Notes Action Agent",
+  "project_type": "llm",
+  "domain": "Workplace AI",
+  "summary": "Turn messy meeting notes into concise summaries, action items, and decision logs.",
+  "tags": [
+    "meetings",
+    "agent",
+    "workflow"
+  ],
+  "accent": "#588157",
+  "dashboard_metrics": [
+    {
+      "label": "Resolution Rate",
+      "value": "55%",
+      "delta": "+5.8%"
+    },
+    {
+      "label": "Answer Quality",
+      "value": "87%",
+      "delta": "+2.2%"
+    },
+    {
+      "label": "Ops Time Saved",
+      "value": "14h",
+      "delta": "+3h"
+    }
+  ],
+  "sample_features": {
+    "query": "Summarize the highest priority risk and recommended next step.",
+    "audience": "leadership"
+  },
+  "sample_metrics": {
+    "acquisition": 31.1,
+    "activation": 33.5,
+    "retention": 47.2,
+    "revenue": 72.7
+  },
+  "knowledge_base": [
+    "Meeting Notes Action Agent is positioned as a Workplace AI starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Turn messy meeting notes into concise summaries, action items, and decision logs.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on meetings, agent, workflow."
+  ]
+}
